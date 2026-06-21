@@ -1,0 +1,29 @@
+{
+  "best_model": "Gradient Boosting (lr=0.1, n=400)",
+  "cv_mae_mean": 105714.45,
+  "cv_mae_std": 26837.33,
+  "metric_for_selection": "MAE",
+  "raw_input_columns": [
+    "bedrooms",
+    "bathrooms",
+    "sqft_living",
+    "sqft_lot",
+    "floors",
+    "waterfront",
+    "view",
+    "condition",
+    "sqft_above",
+    "sqft_basement",
+    "city",
+    "house_age",
+    "is_renovated",
+    "years_since_ren",
+    "sqft_ratio",
+    "zipcode"
+  ],
+  "categorical_features": [
+    "city",
+    "zipcode"
+  ],
+  "target": "log1p(price), predikcija se vraca sa expm1"
+}

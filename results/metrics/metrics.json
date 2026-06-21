@@ -1,0 +1,74 @@
+[
+  {
+    "model": "Baseline (prosjek train skupa)",
+    "split": "VAL",
+    "MAE": 229279.44,
+    "RMSE": 381325.32,
+    "R2": -0.0361,
+    "R2_log": -0.0011
+  },
+  {
+    "model": "Linearna regresija",
+    "split": "VAL",
+    "MAE": 116196.5,
+    "RMSE": 796404.63,
+    "R2": -3.5193,
+    "R2_log": 0.7977
+  },
+  {
+    "model": "Ridge (alpha=0.1)",
+    "split": "VAL",
+    "MAE": 116196.7,
+    "RMSE": 797403.38,
+    "R2": -3.5307,
+    "R2_log": 0.7978
+  },
+  {
+    "model": "Lasso (alpha=0.0001)",
+    "split": "VAL",
+    "MAE": 116738.62,
+    "RMSE": 811737.07,
+    "R2": -3.695,
+    "R2_log": 0.7977
+  },
+  {
+    "model": "KNN (K=5)",
+    "split": "VAL",
+    "MAE": 123685.21,
+    "RMSE": 234558.55,
+    "R2": 0.608,
+    "R2_log": 0.6938
+  },
+  {
+    "model": "Decision Tree (depth=10, leaf=1)",
+    "split": "VAL",
+    "MAE": 124918.29,
+    "RMSE": 210452.02,
+    "R2": 0.6844,
+    "R2_log": 0.666
+  },
+  {
+    "model": "Random Forest (n=200, max_feat=0.5)",
+    "split": "VAL",
+    "MAE": 102746.06,
+    "RMSE": 191096.2,
+    "R2": 0.7398,
+    "R2_log": 0.7772
+  },
+  {
+    "model": "Gradient Boosting (lr=0.1, n=400)",
+    "split": "VAL",
+    "MAE": 90983.84,
+    "RMSE": 193703.32,
+    "R2": 0.7327,
+    "R2_log": 0.8154
+  },
+  {
+    "model": "Gradient Boosting (lr=0.1, n=400)",
+    "split": "TEST",
+    "MAE": 99785.74,
+    "RMSE": 201308.86,
+    "R2": 0.6997,
+    "R2_log": 0.7438
+  }
+]

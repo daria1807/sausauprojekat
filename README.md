@@ -75,8 +75,7 @@ IQR filtriranja (pragovi računati samo na train skupu, val/test netaknuti):
 - IQR filtriranje pogoršava rezultate svih modela — model nikad ne vidi
   skupe kuće, a procjenjuje se na realnoj raspodjeli koja ih sadrži;
 - ekstremne cijene su **legitimne luksuzne kuće** (npr. 7050 ft² u Clyde
-  Hill-u), a ne greške u podacima — gradivo: *"Da li je svaka udaljena
-  tačka nužno anomalija?"*;
+  Hill-u), a ne greške u podacima;
 - log-transformacija targeta već ublažava asimetriju raspodjele.
 
 Zato se trening radi na svim trening podacima, a odluka je dokumentovana
@@ -109,8 +108,7 @@ CV R²(log) = 0.766 ± 0.038 (stabilan).
 - **R² u dolarima** kod linearnih modela može biti i negativan iako je
   R²(log) visok: nekoliko ekstremno skupih kuća dominira kvadratnom greškom
   nakon `expm1` (linearna ekstrapolacija u log prostoru → ogromne vrijednosti
-  u $). To je očekivano ponašanje metrike osjetljive na velika odstupanja
-  (gradivo: *"kvadratne greške posebno naglašavaju velika odstupanja"*),
+  u $). To je očekivano ponašanje metrike osjetljive na velika odstupanja,
   a ne greška u kodu — i jedan je od razloga zašto je ansambl (GB) izabran.
 
 ### Značajnost atributa
@@ -120,8 +118,7 @@ atributima (city/zipcode se permutuju kao cjelina):
 lokacija (`zipcode`, `city`) i površina (`sqft_above`, `sqft_living`)
 dominiraju; slijede `view`, `bathrooms`, `condition`.
 Poređenje "svi vs top 6 atributa" (validacioni skup): linearni modeli i GB
-gube ~0.01 R²(log), a KNN se čak popravlja (manja dimenzionalnost —
-gradivo: KNN je *"slabiji u visokoj dimenzionalnosti"*).
+gube ~0.01 R²(log), a KNN se čak popravlja (manja dimenzionalnost).
 
 ---
 

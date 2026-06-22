@@ -2,7 +2,7 @@
 evaluate.py
 EDA vizualizacije, poredjenje modela i analiza znacajnosti atributa.
 
-Principi (u skladu sa gradivom):
+
   - koristi ISTU podjelu podataka kao train.py (split_data, random_state=42),
   - EDA se radi na TRENING skupu - odluke o obradi podataka ne smiju
     biti donesene na osnovu test podataka,
@@ -42,16 +42,7 @@ plt.rcParams.update({
 FIGURES_DIR = "results/figures"
 os.makedirs(FIGURES_DIR, exist_ok=True)
 
-"""A KAKO SU NEGATIVNI BEDROOMS I FLOORS1:58 AMClaude responded: Odlično pitanje — to treba znati objasniti na odbrani!Odlično pitanje — to treba znati objasniti na odbrani!
 
-Zašto su bedrooms i floors negativni kod GB?
-Negativna vrijednost u permutation importance znači: kada izmješamo (permutujemo) taj atribut, MAE se smanjuje — što znači model bez tog atributa radi bolje.
-Razlog je multikolinearnost i redundantnost:
-
-bedrooms je visoko korelisan sa sqft_living — veća kuća ima više spavaćih soba. GB već hvata tu informaciju kroz sqft_living, pa kad mu damo i bedrooms, taj atribut unosi šum više nego korisnu informaciju
-floors je slično — broj spratova je implicitno sadržan u sqft_living i sqft_above
-
-GB kao model sam uči da ignoriše te atribute, ali kada su prisutni u podacima mogu blago narušiti odluke u nekim stablima. Kada ih permutujemo, slučajno uklonimo taj šum i MAE se malo poboljša."""
 def save_fig(name):
     path = os.path.join(FIGURES_DIR, name)
     plt.tight_layout()

@@ -11,8 +11,8 @@ skupa podataka:
 """
 
 import pandas as pd
-import numpy as np  #where oper
-import os #rad sa folderima i fajlovima,makedirs
+import numpy as np  
+import os 
 
 # Dataset je prikupljen 2014/2015 - referentna godina za starost kuce
 REFERENTNA_GODINA = 2015
@@ -86,17 +86,10 @@ def feature_engineering(df):
     
 
      yr built brisem jer ga pretavram u bolju informaciju,ovo sa oduzimanjem
-    yr renovated brisem i radim provjeru jel renoviran ail ne ,TEU False
+    yr renovated brisem i radim provjeru jel renoviran ail ne ,TRUE False
     KOLIKO JE PROSLO OD RENOVACIJE 2015-yr renovated
 
-    country je obrisao,JER JE SVUGDJE ISTA nmp jel USA 
-    sqft living ostaje, sqft lotmcity
-
-    PRICE(TARGET),city, zipcode, sgft_living(velicina kuce), sqft_lot(velicina placa),batrums,bedrum,floors,house age(startost kuce), is renovated,years since renovation,sqft radio odnose kuce i placa
-    
-       ------------------------------------------------
-    #WA 91893 UZIMAMO BROJ I TO NIJE VECE NPR OD 7000 NE GLEDAS AMTEMATICKI
-    VEC KATEGORICKI VLJD RADI ONEHOTENCODER I NPR TAJ BROJ  ZANCI CENTAR SEATTLE AD RUGI ZNACI DRUGI KRAJ GRADA
+  
     """
 
     df = df.copy()
@@ -130,9 +123,11 @@ def pripremi_i_sacuvaj(raw_path, out_path):
     df = ukloni_nevalidne(df)
     df = feature_engineering(df)
 
-    os.makedirs(os.path.dirname(out_path), exist_ok=True)
+    
     df.to_csv(out_path, index=False)
-    #print(f"Pripremljeni podaci sacuvani u: {out_path}")
+
+
+    
     return df
 
 

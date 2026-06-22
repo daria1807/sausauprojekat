@@ -9,8 +9,7 @@ stringove. Nije potrebno rucno enkodiranje niti rekonstrukcija kolona.
 
 Model je treniran na log(price), pa se predikcija vraca kroz expm1.
 
-Primjer poziva:
-  python src/predict.py
+
 """
 
 import os

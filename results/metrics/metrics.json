@@ -50,10 +50,10 @@
   {
     "model": "Random Forest (n=200, max_feat=0.5)",
     "split": "VAL",
-    "MAE": 102746.06,
-    "RMSE": 191096.2,
-    "R2": 0.7398,
-    "R2_log": 0.7772
+    "MAE": 102978.32,
+    "RMSE": 189803.66,
+    "R2": 0.7433,
+    "R2_log": 0.7778
   },
   {
     "model": "Gradient Boosting (lr=0.1, n=400)",

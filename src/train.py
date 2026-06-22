@@ -6,7 +6,7 @@ za predikciju cijene kuce.
 Modeli: Baseline, Linearna regresija, Ridge, Lasso, KNN,
         Stablo odlucivanja, Random Forest, Gradient Boosting.
 
-Evaluacioni protokol (u skladu sa gradivom):
+
   1. podjela podataka 70/15/15 (train / validation / test) PRIJE
      bilo kakvog preprocesiranja koje uci iz podataka,
   2. IQR uklanjanje outliera - pragovi se racunaju SAMO na train skupu
@@ -347,9 +347,7 @@ def train_all(processed_path: str, models_dir: str, metrics_dir: str) -> None:
     with open(os.path.join(metrics_dir, "metrics.json"), "w") as f:
         json.dump(all_metrics, f, indent=2)
 
-    print(f"\n[INFO] Modeli sacuvani u: {models_dir}")
-    print(f"[INFO] Finalni model: models/final_model.joblib ({best_name})")
-    print(f"[INFO] Metrike sacuvane u: {metrics_dir}/metrics.json")
+   
 
 
 if __name__ == "__main__":

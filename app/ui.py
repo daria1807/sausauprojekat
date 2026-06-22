@@ -116,4 +116,5 @@ if st.button("Procijeni cijenu"):
     st.success(f"Procijenjena cijena: **${price:,.0f}**")
 
 # Pokretanje iz glavnog foldera projekta:
-# streamlit run app/ui.py
+# streamlit run app/ui.pywhere python
+

@@ -33,8 +33,7 @@ ml-project/
 │   ├── figures/             ← svi grafici (.png)
 │   └── metrics/             ← metrike modela (.json)
 ├── app/
-│   ├── ui.py                ← Streamlit aplikacija
-│   └── api.py               ← FastAPI servis
+│   └── ui.py                ← Streamlit aplikacija
 ├── README.md
 └── requirements.txt
 ```
@@ -145,9 +144,6 @@ python src/predict.py
 
 # 5. Streamlit aplikacija
 streamlit run app/ui.py
-
-# 6. FastAPI servis (dokumentacija na /docs)
-uvicorn app.api:app --reload
 ```
 
 Napomena: skripte se pokreću iz glavnog foldera projekta (`ml-project/`).
